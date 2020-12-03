@@ -7,4 +7,6 @@ app.get('/projects', (request, response) => {
   return response.json({message: 'Hello Gostack'});
 });
 
-app.listen(3333);
+app.listen(3333, () => {
+  console.log('Backend Started 🚀')
+});
