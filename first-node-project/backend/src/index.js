@@ -3,6 +3,17 @@ const express = require('express');
 
 const app = express();
 
+/**
+ * Métodos HTTP:
+ * 
+ * GET: Buscar informações do back-end.
+ * POST: Criar uma informação no back-end.
+ * PUT/PATCH: Alterar uma informação no back-end
+ *    -> PUT (atualizando todas informações de uma vez)
+ *    -> PATCH (atualizando uma informação específica)
+ * DELETE: Quando queremos deletar alguma informação do back-end
+ */
+
 app.get('/projects', (request, response) => {
   return response.json({message: 'Hello Gostack'});
 });
