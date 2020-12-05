@@ -30,6 +30,15 @@ app.post('/projects', (request, response) => {
   ]);
 });
 
+app.put('/projects/:id', (request, response) => {
+  return response.json([
+    'Projeto 1',
+    'Projeto 2',
+    'Projeto 3',
+    'Projeto 5',
+  ]);
+});
+
 app.listen(3333, () => {
   console.log('Backend Started 🚀')
 });
