@@ -12,6 +12,17 @@ const app = express();
  *    -> PUT (atualizando todas informações de uma vez)
  *    -> PATCH (atualizando uma informação específica)
  * DELETE: Quando queremos deletar alguma informação do back-end
+ * 
+ * 
+ * Tipos de parâmetros:
+ * 
+ * Query Params: 
+ *  Vamos utilizar principalmente para filtros e paginação
+ * 
+ * Rute Params:
+ *  
+ *  
+ * Request Body:
  */
 
 app.get('/projects', (request, response) => {
