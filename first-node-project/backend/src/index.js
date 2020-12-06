@@ -1,7 +1,8 @@
-const { request, response } = require('express');
+const { request, response, json } = require('express');
 const express = require('express');
 
 const app = express();
+app.use(json());
 
 /**
  * Métodos HTTP:
@@ -20,9 +21,11 @@ const app = express();
  *  Vamos utilizar principalmente para filtros e paginação
  * 
  * Rute Params:
- *  
+ *  Identificar recursos para atualizar ou deletar
  *  
  * Request Body:
+ * Conteúdo na hora de criar ou editar um recurso
+ *  Essas informações são em JSON. 
  */
 
 app.get('/projects', (request, response) => {
@@ -33,6 +36,8 @@ app.get('/projects', (request, response) => {
 });
 
 app.post('/projects', (request, response) => {
+  const teste = request.body;
+  console.log("request body", teste);
   return response.json([
     'Projeto 1',
     'Projeto 2',
