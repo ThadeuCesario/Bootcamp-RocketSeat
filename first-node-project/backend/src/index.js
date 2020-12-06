@@ -39,6 +39,14 @@ app.put('/projects/:id', (request, response) => {
   ]);
 });
 
+app.delete('/projects/:id', (request, response) => {
+  return response.json([
+    'Projeto 1',
+    'Projeto 2',
+    'Projeto 3',
+  ]);
+});
+
 app.listen(3333, () => {
   console.log('Backend Started 🚀')
 });
