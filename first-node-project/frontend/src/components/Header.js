@@ -4,7 +4,7 @@ const Header = props => {
   const {title} = props;
   return (
     <header>
-      <h1>ReactJS</h1>
+      <h1>{title}</h1>
     </header>
   );
 }
