@@ -7,7 +7,7 @@ import Header from './components/Header';
  * 
  * Conceitos fundamentais de react:
  * - Componente
- * - Propriedade
+ * - Propriedade => Informação que pode ser passada de componente pai para componente filho.
  * - Estado
  */
 
