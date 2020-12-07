@@ -34,6 +34,8 @@ app.use(json());
  * O formato de um middleware é uma função.
  * Todas as rotas podem ser consideradas middlewares, pois pegam os dados da requisição e retornam algo novo.
  * Utilizaremos o s middlewares quando queremos que um trecho de código seja disparado em uma ou mais rotas de nossa aplicação.
+ * 
+ * Se não chamarmos a função next() dentro de nosso middleware, o próximo middleware não será disparado.
  */
 
  /**
@@ -46,6 +48,7 @@ function logRequests(request, response, next) {
   const {method, url} = request;
   const logLabel = `[${method.toUpperCase()} ${url}]`;
   console.log(logLabel);
+  return next();
 }
 
 app.use(logRequests);
