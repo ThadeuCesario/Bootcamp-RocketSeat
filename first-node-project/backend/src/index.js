@@ -53,8 +53,9 @@ app.post('/projects', (request, response) => {
 
 app.put('/projects/:id', (request, response) => {
   const {id} = request.params;
+  console.log(id);
   const project = projects.filter(project => project.id === id);
-
+  console.log("project", project);
   return response.json([
     'Projeto 1',
     'Projeto 2',
