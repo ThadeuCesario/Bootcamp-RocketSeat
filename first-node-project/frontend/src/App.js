@@ -1,7 +1,7 @@
 import React from 'react';
 
 /**
- * 
+ * Sempre criaremos um componente quando queremos reaproveitar um código
  */
 
 function App() {
