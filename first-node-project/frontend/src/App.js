@@ -6,6 +6,9 @@ import Header from './components/Header';
  * Lembre-se que no React não são permitidos elementos adjacentes. Nesses casos precisamos utilicar um Fragment.
  * 
  * Conceitos fundamentais de react:
+ * - Componente
+ * - Propriedade
+ * 
  */
 
 function App() {
