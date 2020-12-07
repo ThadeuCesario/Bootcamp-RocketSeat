@@ -54,6 +54,10 @@ function logRequests(request, response, next) {
   console.timeEnd(logLabel);
 }
 
+function validateProjectId(request, response, next) {
+  
+}
+
 app.use(logRequests);
 
 app.get('/projects', (request, response) => {
