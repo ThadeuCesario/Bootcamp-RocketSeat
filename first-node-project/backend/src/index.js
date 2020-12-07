@@ -29,6 +29,10 @@ app.use(json());
  *  Essas informações são em JSON. 
  */
 
+ /**
+  * Estamos utilizando a memória de nossa aplicação para armazenar nossos dados. 
+  * Detalhe que isso é apenas para nosso estudo. Jamais devemos aplicar esse método em produção.
+  */
  const  projects = [];
 
 app.get('/projects', (request, response) => {
@@ -48,6 +52,9 @@ app.post('/projects', (request, response) => {
 });
 
 app.put('/projects/:id', (request, response) => {
+  const {id} = request.params;
+  const project = projects.filter(project => project.id === id);
+
   return response.json([
     'Projeto 1',
     'Projeto 2',
