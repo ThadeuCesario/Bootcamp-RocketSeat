@@ -15,7 +15,10 @@ function App() {
   return (
     <>
       <Header title={'Homepage'}>
-        <div>Componente Filho</div>
+        <ul>
+          <li>Hmepage</li>
+          <li>Projects</li>
+        </ul>
       </Header>
       <Header title={'Projects'} />
     </>
