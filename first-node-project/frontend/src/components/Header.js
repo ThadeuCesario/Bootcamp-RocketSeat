@@ -1,6 +1,6 @@
 import React, { Children } from 'react';
 
-const Header = props => {
+const Header = (props, children) => {
   const {title, children} = props;
   return (
     <header>
