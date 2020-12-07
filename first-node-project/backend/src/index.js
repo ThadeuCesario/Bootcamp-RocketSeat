@@ -27,6 +27,10 @@ app.use(json());
  * Request Body:
  * Conteúdo na hora de criar ou editar um recurso
  *  Essas informações são em JSON. 
+ * 
+ * Middleware:
+ * Um middleware é um intereceptador de requisições.
+ * Podendo interromper totalmente a requisição
  */
 
  /**
