@@ -14,8 +14,8 @@ import Header from './components/Header';
 function App() {
   return (
     <>
-      <Header />
-      <Header />
+      <Header title={'Homepage'}/>
+      <Header title={'Projects'} />
     </>
   );
 }
