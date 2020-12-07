@@ -21,6 +21,11 @@ function App() {
         </ul>
       </Header>
       <Header title={'Projects'}>
+        <ul>
+          <li>Hmepage</li>
+          <li>Projects</li>
+          <li>Login</li>
+        </ul>
       </Header>
     </>
   );
