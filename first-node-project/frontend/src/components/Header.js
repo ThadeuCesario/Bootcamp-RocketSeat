@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Header = () => {
+const Header = props => {
+  const {title} = props;
   return (
     <header>
       <h1>ReactJS</h1>
