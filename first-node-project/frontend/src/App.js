@@ -8,7 +8,7 @@ import Header from './components/Header';
  * Conceitos fundamentais de react:
  * - Componente
  * - Propriedade
- * 
+ * - Estado
  */
 
 function App() {
