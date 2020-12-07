@@ -20,7 +20,8 @@ function App() {
           <li>Projects</li>
         </ul>
       </Header>
-      <Header title={'Projects'} />
+      <Header title={'Projects'}>
+      </Header>
     </>
   );
 }
