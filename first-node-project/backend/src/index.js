@@ -47,13 +47,17 @@ app.use(json());
 function logRequests(request, response, next) {
   const {method, url} = request;
   const logLabel = `[${method.toUpperCase()} ${url}]`;
-  console.log(logLabel);
-  return next();
+  console.log('1');
+  console.time(logLabel);
+  next();
+  console.log('2');
+  console.timeEnd(logLabel);
 }
 
 app.use(logRequests);
 
 app.get('/projects', (request, response) => {
+  console.log('3');
   const {title} = request.query;
   const filteredProjects = title ? projects.filter(project  => project.title.includes(title)) : projects; 
   return response.json(filteredProjects);
