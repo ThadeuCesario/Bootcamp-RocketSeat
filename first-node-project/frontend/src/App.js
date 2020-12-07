@@ -15,6 +15,8 @@ function App() {
   return (
     <>
       <Header title={'Homepage'}/>
+        <div>Componente Filho</div>
+      </Header>
       <Header title={'Projects'} />
     </>
   );
