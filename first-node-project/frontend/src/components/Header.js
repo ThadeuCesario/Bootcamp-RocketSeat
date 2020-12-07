@@ -1,8 +1,6 @@
 import React, { Children } from 'react';
 
-const Header = (props) => {
-  const {title, children} = props;
-  console.log(props);
+const Header = ({title, children} ) => {
   return (
     <header>
       <h1>{title}</h1>
