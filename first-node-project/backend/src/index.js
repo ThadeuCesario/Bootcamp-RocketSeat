@@ -33,6 +33,7 @@ app.use(json());
  * Podendo interromper totalmente a requisição ou pode alterar dados da requisição.
  * O formato de um middleware é uma função.
  * Todas as rotas podem ser consideradas middlewares, pois pegam os dados da requisição e retornam algo novo.
+ * Utilizaremos o s middlewares quando queremos que um trecho de código seja disparado em uma ou mais rotas de nossa aplicação.
  */
 
  /**
@@ -41,7 +42,13 @@ app.use(json());
   */
  const  projects = [];
 
-function logRequests(request, response)
+function logRequests(request, response, next) {
+  const {method, url} = request;
+  const logLabel = `[${method.toUpperCase()} ${url}]`;
+  console.log(logLabel);
+}
+
+app.use(logRequests);
 
 app.get('/projects', (request, response) => {
   const {title} = request.query;
