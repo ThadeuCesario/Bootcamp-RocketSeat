@@ -5,7 +5,7 @@ const Header = props => {
   return (
     <header>
       <h1>{title}</h1>
-      {Children}
+      {children}
     </header>
   );
 }
