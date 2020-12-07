@@ -30,7 +30,9 @@ app.use(json());
  * 
  * Middleware:
  * Um middleware é um intereceptador de requisições.
- * Podendo interromper totalmente a requisição
+ * Podendo interromper totalmente a requisição ou pode alterar dados da requisição.
+ * O formato de um middleware é uma função.
+ * Todas as rotas podem ser consideradas middlewares, pois pegam os dados da requisição e retornam algo novo.
  */
 
  /**
@@ -38,6 +40,8 @@ app.use(json());
   * Detalhe que isso é apenas para nosso estudo. Jamais devemos aplicar esse método em produção.
   */
  const  projects = [];
+
+function logRequests(request, response)
 
 app.get('/projects', (request, response) => {
   const {title} = request.query;
